@@ -53,6 +53,17 @@ const Upload = () => {
         )
         if(!feedback) return setStatusText('Error: Failed to analyze resume');
 
+          // const feedback = await ai.feedback(
+          //     uploadedFile.path,
+          //     prepareInstructions({jobTitle, jobDescription})
+          //   );
+
+          //   if (!feedback || feedback.success === false) {
+          //     setStatusText(feedback?.error?.message || "API error occurred");
+          //     setIsProcessing(false);
+          //     return;
+          //   }
+            
         const feedbackText = typeof feedback.message.content === 'string'
          ? feedback.message.content 
          : feedback.message.content[0].text;

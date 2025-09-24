@@ -354,6 +354,8 @@ export const usePuterStore = create<PuterStore>((set, get) => {
     ) as Promise<AIResponse | undefined>;
   };
 
+//  'deepseek/deepseek-r1',
+//   model: 'anthropic/claude-3-haiku'
   const img2txt = async (image: string | File | Blob, testMode?: boolean) => {
     const puter = getPuter();
     if (!puter) {
